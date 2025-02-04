@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import theme from './assets/theme.js'
 import Homepage from './views/Homepage.jsx'
+import { Box, ThemeProvider } from '@mui/material'
+import CssBaseline from '@mui/material/CssBaseline'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Homepage />
-  </StrictMode>,
+  <ThemeProvider theme={theme}>
+    <CssBaseline/>
+    <Box
+      display='flex'
+      flexDirection='column'
+      justifyContent='center'
+    >
+      <Homepage/>
+    </Box>
+  </ThemeProvider>,
 )
