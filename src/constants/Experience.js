@@ -10,6 +10,17 @@ const Experience = [
       'Communication',
       'Team-work'
     ]
+  },
+  {
+    title: 'Junior Full-Stack Engineer',
+    company: 'Interclypse',
+    years: {
+      startDate: '2024',
+      endDate: 'Present'
+    },
+    skills: [
+      'Java', 'React', 'Spring Framework', 'Next.js'
+    ]
   }
 ]
 

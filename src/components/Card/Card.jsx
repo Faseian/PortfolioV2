@@ -1,5 +1,6 @@
 import { Box, Paper } from '@mui/material'
-
+import { Link } from 'react-router'
+ 
 export default function Card({ children, style }) {
   return (
     <Box
@@ -9,7 +10,14 @@ export default function Card({ children, style }) {
       p={2}
       {...style}
     >
-      {children}
+      <Box
+        component={Link}
+        sx={{ textDecoration: 'none' }}
+        color='black'
+        to='/projectLink'
+      >
+        {children}
+      </Box>
     </Box>
   )
 }
