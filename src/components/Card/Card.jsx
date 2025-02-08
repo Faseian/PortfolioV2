@@ -1,7 +1,7 @@
 import { Box, Paper } from '@mui/material'
 import { Link } from 'react-router'
  
-export default function Card({ children, style }) {
+export default function Card({ link, children, style }) {
   return (
     <Box
       component={Paper}
@@ -14,7 +14,7 @@ export default function Card({ children, style }) {
         component={Link}
         sx={{ textDecoration: 'none' }}
         color='black'
-        to='/projectLink'
+        to={link}
       >
         {children}
       </Box>

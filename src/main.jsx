@@ -15,7 +15,8 @@ createRoot(document.getElementById('root')).render(
         justifyContent='center'
       >
         <Routes>
-          <Route index path='/' element={<Homepage/>}>
+          <Route path='/'>
+            <Route index element={<Homepage/>}/>
           </Route>
         </Routes>
       </Box>

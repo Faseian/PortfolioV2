@@ -1,4 +1,5 @@
 import { Container, Grid2 as Grid, Paper, Typography } from '@mui/material'
+import { Link } from 'react-router'
 import Card from '../components/Card/Card'
 import experience from '../constants/Experience'
 import projects from '../constants/Projects'
@@ -45,9 +46,7 @@ export default function Homepage() {
       languages
     } = project
     return (
-      <Card
-        style={{ component: Link }}
-      >
+      <Card link={project.link}>
         <Typography>
           {title}
         </Typography>
@@ -63,7 +62,7 @@ export default function Homepage() {
         <Grid container
           size={12}
           justifyContent='center'
-          direction='column'
+          direction={'column'}
         >
           <Grid size={12}>
             <Typography
@@ -79,14 +78,17 @@ export default function Homepage() {
               Nathan Bankert
             </Typography>
           </Grid>
-          <Grid container>
+          <Grid
+            container
+            direction={{ xs: 'column-reverse', md: 'row' }}
+          >
             <Grid size={{ xs: 12, md: 8}}>
               <Card>
                 <Typography variant='h5'>
                   Projects:
                 </Typography>
-                {projects.map((project) =>
-                  <Grid size={{ xs: 12, md: 3 }}>
+                {projects.map((project, index) =>
+                  <Grid key={index} size={{ xs: 12, md: 3 }}>
                     <ProjectDiv project={project}/>
                   </Grid>
                 )}
@@ -96,6 +98,7 @@ export default function Homepage() {
               size={{ xs: 12, md: 4}}
             >
               <Card>
+                <img src='../../public/assets/placeholder.png' width='100px' height='100px'/>
                 <Typography variant='h5'>
                   About me
                 </Typography>
@@ -125,8 +128,8 @@ export default function Homepage() {
                 justifyContent='space-evenly'
               >
                 {experience.map((job) =>
-                  <Grid size={{ xs: 12, md: 3}}>
-                    <JobDiv key={job.title} job={job}/>
+                  <Grid key={job.title} size={{ xs: 12, md: 3}}>
+                    <JobDiv job={job}/>
                   </Grid>
                 )}
               </Grid>
