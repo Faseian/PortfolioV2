@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+import "@fontsource/quicksand"
 
 const theme = createTheme({
   components: {
@@ -13,7 +14,7 @@ const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: 'serif',
+    fontFamily: 'quicksand',
     color: '#bfd1e5'
   },
 })
