@@ -5,7 +5,7 @@ const Projects = [
     languages:[
       'Java'
     ],
-    description: 'Computer Science project I created using '
+    description: 'Computer Science project I created to help track my expenses'
   },
   {
     title: 'Data Models',
@@ -14,7 +14,7 @@ const Projects = [
       'Java',
       'C++',
     ],
-    description: 'Computer Science projects Ive worked'
+    description: 'Computer Science projects I have worked on'
   }
 ]
 

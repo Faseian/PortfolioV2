@@ -1,6 +1,9 @@
+import { Description } from "@mui/icons-material"
+
 const Experience = [
   {
     title: 'Cashier',
+    description: 'I helped customers at checkout and other jobs such as making small orders or cleaning',
     company: 'Mamma Angelas',
     years: {
       startDate: '2019',
@@ -13,6 +16,7 @@ const Experience = [
   },
   {
     title: 'Junior Full-Stack Engineer',
+    description: 'Working in a full-stack environment using React on the frontend and Spring Boot on the backend',
     company: 'Interclypse',
     years: {
       startDate: '2024',

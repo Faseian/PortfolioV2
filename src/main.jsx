@@ -9,17 +9,12 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <Box
-        display='flex'
-        flexDirection='column'
-        justifyContent='center'
-      >
+     
         <Routes>
           <Route path='/'>
             <Route index element={<Homepage/>}/>
           </Route>
         </Routes>
-      </Box>
     </ThemeProvider>
   </BrowserRouter>,
 )
